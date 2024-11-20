@@ -2,8 +2,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int main()
+int	main(void)
 {
+	char	*argv[] = {"ls", "-l", "-h", "-a", NULL};
 
-    return (EXIT_SUCCESS);
+	execvp(argv[0], argv);
+	return (EXIT_SUCCESS);
 }
